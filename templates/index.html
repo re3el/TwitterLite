@@ -1,0 +1,14 @@
+<h3>Twitter Lite!</h3>
+<hr>
+
+<ul>
+  {% for tweet in tweets %}
+  <li>
+    <p><b> <img src="{{ tweet.user.profile_image_url }}" style="float:left;width:15px;height:15px;">&nbsp;&nbsp;{{ tweet.user.name }} - {{ tweet.created_at }} - Verifed: {{ tweet.user.verified }} </b></p>
+    <p>{{ tweet.text }}</p>
+  </li>
+  {% endfor %}
+</ul>
+
+<hr>
+<footer>Currently doesn't support streaming of new content on the go.</footer>
